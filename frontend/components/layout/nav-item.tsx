@@ -13,16 +13,19 @@ export type NavItemType = {
     name: string
     link: string
     Icon: ComponentType<ComponentProps<'svg'>>
+    exact?: boolean
     submenu: null | SubMenuItemType[]
 }
 
-const matches = (pathname: string, link: string) => {
-    return pathname === link || pathname.startsWith(link + "/")
+const matches = (pathname: string, link: string, exact = false) => {
+    return pathname === link || (!exact && pathname.startsWith(link + "/"))
 }
+
 
 const NavItem = ({ item }: { item: NavItemType }) => {
     const pathname = usePathname()
-    const isActive = matches(pathname, item.link) || !!item.submenu?.some((s) => matches(pathname, s.link))
+
+    const isActive = matches(pathname, item.link, item.exact) || !!item.submenu?.some((s) => matches(pathname, s.link))
 
     return (
         <>

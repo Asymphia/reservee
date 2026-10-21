@@ -5,7 +5,7 @@ import NavItem, { NavItemType } from "@/components/layout/nav-item"
 
 const Menu = () => {
     const navLinks = [
-        { name: 'Dashboard', link: '/dashboard', Icon: ChartPieIcon, submenu: null },
+        { name: 'Dashboard', link: '/dashboard', Icon: ChartPieIcon, exact: true, submenu: null },
         { name: 'Reservations', link: '/dashboard/reservations', Icon: CalendarIcon, submenu: null },
         { name: 'Tables', link: '/dashboard/tables', Icon: ViewColumnsIcon, submenu: null },
         { name: 'Restaurant', link: '/dashboard/restaurant', Icon: BriefcaseIcon, submenu: [
