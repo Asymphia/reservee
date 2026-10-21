@@ -1,3 +1,9 @@
 const Dashboard = () => {
-    return ()
+    return (
+        <div>
+            szopy
+        </div>
+    )
 }
+
+export default Dashboard

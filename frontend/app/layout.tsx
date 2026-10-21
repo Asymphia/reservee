@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { InterFont, JakartaFont } from "@/lib/fonts"
+import "./globals.css"
 
 export const metadata: Metadata = {
     title: "Reservee",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: LayoutProps<"/">) => {
     return (
         <html lang="en" className={`${ JakartaFont.variable } ${ InterFont.variable }`}>
-            <body>
+            <body className="min-h-screen">
                 { children }
             </body>
         </html>
