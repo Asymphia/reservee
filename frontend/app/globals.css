@@ -30,6 +30,9 @@
 
     --font-inter: var(--font-inter);
     --font-jakarta: var(--font-jakarta);
+
+    --shadow-md: 2px 0 6px 0 rgba(var(--text-700), .1);
+    --shadow-sm: 0 2px 6px 0 rgba(var(--text-700), .05);
 }
 
 @layer base {
