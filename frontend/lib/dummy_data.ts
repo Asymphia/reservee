@@ -43,3 +43,73 @@ export const tables: TableType[] = [
         available: 3
     },
 ]
+
+export type Reservation = {
+    name: string
+    surname: string
+    phone: string
+    email: string
+    status: "Pending" | "Accepted" | "Cancelled" | "No-show"
+    table: string
+    numberOfPeople: number
+    date: string
+    time: string
+}
+
+export const reservations: Reservation[] = [
+    {
+        name: "Szopy",
+        surname: "Szopix",
+        phone: "123 123 123",
+        email: "szop@szopix.szopers",
+        status: "Pending",
+        table: "Table 1",
+        numberOfPeople: 3,
+        date: "24 oct. 2026",
+        time: "14:00"
+    },
+    {
+        name: "Szopy",
+        surname: "Szopix",
+        phone: "123 123 123",
+        email: "szop@szopix.szopers",
+        status: "Pending",
+        table: "Table 1",
+        numberOfPeople: 3,
+        date: "24 oct. 2026",
+        time: "14:00"
+    },
+    {
+        name: "Szopy",
+        surname: "Szopix",
+        phone: "123 123 123",
+        email: "szop@szopix.szopers",
+        status: "Pending",
+        table: "Table 1",
+        numberOfPeople: 3,
+        date: "24 oct. 2026",
+        time: "14:00"
+    },
+    {
+        name: "Szopy",
+        surname: "Szopix",
+        phone: "123 123 123",
+        email: "szop@szopix.szopers",
+        status: "Pending",
+        table: "Table 1",
+        numberOfPeople: 3,
+        date: "24 oct. 2026",
+        time: "14:00"
+    },
+    {
+        name: "Szopy",
+        surname: "Szopix",
+        phone: "123 123 123",
+        email: "szop@szopix.szopers",
+        status: "Pending",
+        table: "Table 1",
+        numberOfPeople: 3,
+        date: "24 oct. 2026",
+        time: "14:00"
+    }
+]

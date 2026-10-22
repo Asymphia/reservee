@@ -2,10 +2,9 @@ import Card from "@/components/ui/card"
 import Heading from "@/components/ui/heading"
 import Tag from "@/components/ui/tag"
 import { TableType } from "@/lib/dummy_data"
-import Image from "next/image"
-import tablePlaceholder from "@/assets/table-placeholder.svg"
-import PercentageLine from "@/components/ui/percentage-line";
-import Button from "@/components/ui/button";
+import PercentageLine from "@/components/ui/percentage-line"
+import Button from "@/components/ui/button"
+import TableWithBg from "@/components/ui/table-with-bg"
 
 const TableCard = ({ table }: { table: TableType }) => {
     const percentage = table.available * 100 / table.numberOfTables
@@ -24,16 +23,7 @@ const TableCard = ({ table }: { table: TableType }) => {
                 }
             />
 
-            <div className="rounded-xl bg-foreground h-50 p-4">
-                <div className="relative h-full w-full">
-                    <Image
-                        src={ tablePlaceholder }
-                        alt="Preview of a table"
-                        fill
-                        className="object-contain"
-                    />
-                </div>
-            </div>
+            <TableWithBg className="h-50" />
 
             <PercentageLine percentage={ percentage } />
 
