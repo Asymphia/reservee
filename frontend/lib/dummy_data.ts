@@ -125,10 +125,28 @@ export const tableUsage: TableUsage[] = [
     { name: "Table 11", seats: 6, bookings: 6 },
 ]
 
-export type WeekdayShare = { day: string; value: number }   // value w %
+export type WeekdayShare = { day: string; value: number }
 
 export const weekdayShare: WeekdayShare[] = [
     { day: "Mo", value: 9 },  { day: "Tu", value: 12 }, { day: "We", value: 11 },
     { day: "Th", value: 15 }, { day: "Fr", value: 22 }, { day: "Sa", value: 24 },
     { day: "Su", value: 7 },
+]
+
+export type Share = { label: string; value: number; color?: string }
+
+export const statusShare: Share[] = [
+    { label: "Accepted", value: 72 },
+    { label: "Pending",  value: 12 },
+    { label: "Canceled", value: 13 },
+    { label: "No-show",  value: 3 },
+]
+
+export const partySize: Share[] = [
+    { label: "1 guest", value: 5 },
+    { label: "2 guests", value: 29 },
+    { label: "3–4 guests", value: 46 },
+    { label: "5–6 guests", value: 14 },
+    { label: "7-8 guests",  value: 4 },
+    { label: "9+ guests",  value: 2 },
 ]

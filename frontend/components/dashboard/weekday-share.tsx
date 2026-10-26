@@ -21,7 +21,7 @@ const WeekdayShare = ({ data }: { data: Share[] }) => {
                                 { d.value }%
                             </span>
 
-                            <div className="w-full h-36 rounded-lg bg-foreground flex items-end">
+                            <div className="w-full h-36 rounded-lg bg-text-500 flex items-end">
                                 <div
                                     className="w-full rounded-lg bg-primary-500"
                                     style={{ height: `${(d.value / max) * 100}%` }}
