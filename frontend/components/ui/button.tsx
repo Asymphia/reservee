@@ -4,10 +4,11 @@ interface ButtonProps {
     children: ReactNode
     type?: "primary" | "secondary" | "accent"
     className?: string
+    isSmall?: boolean
 }
 
-const Button = ({ children, type="primary", className="" }: ButtonProps) => {
-    let buttonStyles = "px-6 py-3 rounded-md font-semibold flex items-center justify-center gap-2"
+const Button = ({ children, type="primary", className="", isSmall=false }: ButtonProps) => {
+    let buttonStyles = `rounded-md font-semibold flex items-center justify-center gap-2 ${ isSmall ? "px-4 py-2 text-sm" : "px-6 py-3" }`
 
     switch (type) {
         case "primary":

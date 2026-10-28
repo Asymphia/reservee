@@ -150,3 +150,18 @@ export const partySize: Share[] = [
     { label: "7-8 guests",  value: 4 },
     { label: "9+ guests",  value: 2 },
 ]
+
+export type CustomerMapData = {
+    days: string[]
+    hours: number[]
+    values: number[][]
+}
+
+const dayWeight  = [0.55, 0.7, 0.65, 0.8, 1.15, 1.4, 0.9]
+const hourWeight = [0.35, 0.5, 0.4, 0.2, 0.18, 0.45, 0.8, 1, 0.9, 0.5]
+
+export const customerMap: CustomerMapData = {
+    days: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+    hours: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+    values: hourWeight.map(h => dayWeight.map(d => Math.round(26 * d * h))),
+}

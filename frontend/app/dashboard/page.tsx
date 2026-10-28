@@ -1,5 +1,5 @@
 import Heading from "@/components/ui/heading"
-import { partySize, statusShare, tableUsage, user, weekdayShare } from "@/lib/dummy_data"
+import {customerMap, partySize, statusShare, tableUsage, user, weekdayShare} from "@/lib/dummy_data"
 import CurrentDate from "@/components/layout/current-year"
 import Switch from "@/components/ui/switch"
 import StatsGrid from "@/components/dashboard/stats-grid"
@@ -9,6 +9,8 @@ import WeekdayShare from "@/components/dashboard/weekday-share"
 import TablesUsage from "@/components/dashboard/tables-usage"
 import ReservationStatus from "@/components/dashboard/reservation-status"
 import PartySize from "@/components/dashboard/party-size"
+import CustomerMap from "@/components/dashboard/customer-map"
+import PendingReservations from "@/components/dashboard/pending-reservations"
 
 const Dashboard = () => {
     const week = [
@@ -42,7 +44,7 @@ const Dashboard = () => {
             <div className="space-y-6">
                 <StatsGrid />
 
-                <div className="grid grid-cols-[1.5fr_1fr] gap-6">
+                <div className="grid grid-cols-3 gap-6">
                     <GuestsChart data={ week } />
 
                     <div className="space-y-6">
@@ -56,6 +58,12 @@ const Dashboard = () => {
                     <TablesUsage tables={ tableUsage } />
                     <ReservationStatus data={ statusShare } />
                     <PartySize data={ partySize } />
+                </div>
+
+                <div className="grid grid-cols-3 gap-6">
+                    <CustomerMap data={ customerMap } />
+
+                    <PendingReservations />
                 </div>
             </div>
         </div>

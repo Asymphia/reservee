@@ -9,7 +9,7 @@ export type GuestsPoint = { label: string; current: number | null; previous: num
 const tick = { fill: "var(--text-300)", fontSize: 14 }
 
 const GuestsChart = ({ data }: { data: GuestsPoint[] }) => (
-    <Card className="flex flex-col gap-8">
+    <Card className="flex flex-col gap-8 col-span-2">
         <Heading
             isH2
             title="Guests over time"
