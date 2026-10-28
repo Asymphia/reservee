@@ -1,0 +1,14 @@
+﻿[Bb]in/
+[Oo]bj/
+
+.idea/
+*.sln.iml
+*.DotSettings.user
+
+*.user
+*.suo
+
+.env
+.env.*
+!.env.example
+appsettings.Local.json
