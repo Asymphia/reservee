@@ -5,10 +5,13 @@ interface ButtonProps {
     type?: "primary" | "secondary" | "accent"
     className?: string
     isSmall?: boolean
+    isSubmit?: boolean
+    onClick?: () => void
+    disabled?: boolean
 }
 
-const Button = ({ children, type="primary", className="", isSmall=false }: ButtonProps) => {
-    let buttonStyles = `rounded-md font-semibold flex items-center justify-center gap-2 ${ isSmall ? "px-4 py-2 text-sm" : "px-6 py-3" }`
+const Button = ({ children, type="primary", className="", isSmall=false, isSubmit=false, onClick, disabled=false }: ButtonProps) => {
+    let buttonStyles = `rounded-md font-semibold flex items-center justify-center gap-2 ${ isSmall ? "px-4 py-2 text-sm" : "px-6 py-3" } ${ disabled ? "opacity-50 cursor-not-allowed" : "" }`
 
     switch (type) {
         case "primary":
@@ -25,7 +28,7 @@ const Button = ({ children, type="primary", className="", isSmall=false }: Butto
     buttonStyles += className
 
     return (
-        <button className={ buttonStyles }>
+        <button className={ buttonStyles } type={ isSubmit ? "submit" : "button" } onClick={ onClick } disabled={ disabled }>
             { children }
         </button>
     )

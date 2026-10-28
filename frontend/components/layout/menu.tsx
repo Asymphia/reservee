@@ -9,7 +9,7 @@ const Menu = () => {
         { name: 'Reservations', link: '/dashboard/reservations', Icon: CalendarIcon, submenu: null },
         { name: 'Tables', link: '/dashboard/tables', Icon: ViewColumnsIcon, submenu: null },
         { name: 'Restaurant', link: '/dashboard/restaurant', Icon: BriefcaseIcon, submenu: [
-            { name: 'Details', link: '/dashboard/restaurant/details' },
+            { name: 'Details', link: '/dashboard/restaurant' },
             { name: 'Menu', link: '/dashboard/restaurant/menu' },
             { name: 'Capacity', link: '/dashboard/restaurant/capacity' },
             { name: 'Reservations', link: '/dashboard/restaurant/reservations' },

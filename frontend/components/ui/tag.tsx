@@ -3,10 +3,11 @@ import { ReactNode } from "react"
 interface TagProps {
     children: ReactNode
     type?: "primary" | "secondary" | "accent" | "warning"
+    className?: string
 }
 
-const Tag = ({ children, type="primary" }: TagProps) => {
-    let tagStyles = "text-xs rounded-full px-3 py-1 w-fit"
+const Tag = ({ children, type="primary", className }: TagProps) => {
+    let tagStyles = `text-xs rounded-full px-3 py-1 w-fit ${ className }`
 
     switch(type) {
         case "primary":
