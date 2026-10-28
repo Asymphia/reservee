@@ -3,7 +3,7 @@
 import Card from "@/components/ui/card"
 import Heading from "@/components/ui/heading"
 import Input from "@/components/ui/input"
-import { EnvelopeIcon, HomeIcon, MapPinIcon, PencilIcon, PhoneIcon } from "@heroicons/react/24/outline"
+import { ClockIcon, EnvelopeIcon, HomeIcon, MapPinIcon, PencilIcon, PhoneIcon } from "@heroicons/react/24/outline"
 import TagsInput from "@/components/ui/tags-input"
 import { useState } from "react"
 
@@ -38,6 +38,22 @@ const GuestProfile = () => {
                         placeholder="Type street address here..."
                         icon={ HomeIcon }
                         label="Street address"
+                        className="bg-foreground"
+                    />
+                </div>
+
+                <div className="grid grid-cols-2 gap-5">
+                    <Input
+                        placeholder="Type opening hour here..."
+                        icon={ ClockIcon }
+                        label="Opens"
+                        className="bg-foreground"
+                    />
+
+                    <Input
+                        placeholder="Type closing hour here..."
+                        icon={ ClockIcon }
+                        label="Closes"
                         className="bg-foreground"
                     />
                 </div>
