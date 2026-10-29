@@ -6,7 +6,8 @@ import { usePathname } from "next/navigation"
 
 type SubMenuItemType = {
     name: string,
-    link: string
+    link: string,
+    exact?: boolean
 }
 
 export type NavItemType = {
@@ -40,7 +41,7 @@ const NavItem = ({ item }: { item: NavItemType }) => {
             <nav className="flex flex-col">
                 {
                     isActive && item.submenu?.map((sub, i) => {
-                        const isSubActive = matches(pathname, sub.link)
+                        const isSubActive = matches(pathname, sub.link, sub.exact)
 
                         return (
                             <Link key={ i } href={ sub.link } className={`px-4 ml-7 py-2 text-sm ${ isSubActive ? "text-primary-500 font-bold" : "" }`}>

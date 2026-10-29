@@ -5,6 +5,7 @@ import { user } from "@/lib/dummy_data"
 import Switch from "@/components/ui/switch"
 import GuestProfile from "@/components/restaurant/guest-profile"
 import Photos from "@/components/restaurant/photos"
+import GuestsLimit from "@/components/restaurant/guests-limit";
 
 const RestaurantPage = () => {
     return (
@@ -26,10 +27,14 @@ const RestaurantPage = () => {
                 currentItem="Details"
             />
 
-            <div className="grid grid-cols-[1.5fr_1fr] gap-6 items-start">
+            <div className="grid grid-cols-[1.4fr_1fr] gap-6 items-start">
                 <GuestProfile />
 
-                <Photos />
+                <div className="space-y-6">
+                    <Photos />
+
+                    <GuestsLimit />
+                </div>
             </div>
         </div>
     )

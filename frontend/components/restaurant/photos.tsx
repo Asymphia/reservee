@@ -12,7 +12,7 @@ const Photos = () => {
             />
 
             <div className="space-y-5">
-                <div className="grid grid-cols-2 grid-rows-2 gap-5 h-100">
+                <div className="grid grid-cols-2 grid-rows-2 gap-5 h-80">
                     <div className="bg-foreground rounded-lg row-span-2" />
 
                     <div className="bg-foreground rounded-lg" />
