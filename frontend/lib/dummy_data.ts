@@ -165,3 +165,31 @@ export const customerMap: CustomerMapData = {
     hours: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
     values: hourWeight.map(h => dayWeight.map(d => Math.round(26 * d * h))),
 }
+
+export type MenuItem = {
+    name: string
+    description: string
+    price: string
+}
+
+export type MenuCategory = {
+    name: string
+    items: MenuItem[]
+}
+
+export const menu: MenuCategory[] = [
+    {
+        name: "Starters",
+        items: [
+            { name: "Edamame", description: "Sea salt, lime", price: "16" },
+            { name: "Yellowtail jalapeño", description: "Yuzu, ponzu", price: "48" },
+        ],
+    },
+    {
+        name: "Main courses",
+        items: [
+            { name: "Black cod miso", description: "Sweet miso, pickled ginger", price: "92" },
+            { name: "Salmon teriyaki", description: "Rice, seasonal greens", price: "68" },
+        ],
+    },
+]
