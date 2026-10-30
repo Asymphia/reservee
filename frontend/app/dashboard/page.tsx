@@ -41,30 +41,26 @@ const Dashboard = () => {
                 }
             />
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-3 gap-6">
                 <StatsGrid />
 
-                <div className="grid grid-cols-3 gap-6">
-                    <GuestsChart data={ week } />
+                <GuestsChart data={ week } />
 
-                    <div className="space-y-6">
-                        <RightNowStats />
+                <div className="space-y-6">
+                    <RightNowStats />
 
-                        <WeekdayShare data={ weekdayShare } />
-                    </div>
+                    <WeekdayShare data={ weekdayShare } />
                 </div>
 
-                <div className="grid grid-cols-3 gap-6">
-                    <TablesUsage tables={ tableUsage } />
-                    <ReservationStatus data={ statusShare } />
-                    <PartySize data={ partySize } />
-                </div>
+                <TablesUsage tables={ tableUsage } />
 
-                <div className="grid grid-cols-3 gap-6">
-                    <CustomerMap data={ customerMap } />
+                <ReservationStatus data={ statusShare } />
 
-                    <PendingReservations />
-                </div>
+                <PartySize data={ partySize } />
+
+                <CustomerMap data={ customerMap } />
+
+                <PendingReservations />
             </div>
         </div>
     )
